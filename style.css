@@ -269,7 +269,8 @@ footer a{
     }
 
     .profile img {
-        width: 15%;
+        width: 42px;
+        height: 42px;
         border-radius: 2000px;
     }
     
@@ -289,10 +290,6 @@ footer a{
         width: 100%;
         overflow: visible;
         display: flex;
-    }
-
-    .active .photo-and-infos img{
-        width: 10%;
     }
 
     .active p,
