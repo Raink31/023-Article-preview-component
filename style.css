@@ -223,14 +223,27 @@ button::after{
     transform: scale(120%);
 }
 
+footer {
+    margin-top: 1rem;
+    color: var(--very-dark-grayis-blue);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e6756;
+}
+
 @media screen and (min-width: 1103px) {
     /* Main */
 
     main{
         display: flex;
+        max-height: 300px;
         max-width: 60%;
         height: 300px;
         position: relative;
+        overflow: visible;
     }
 
     /* Image */
@@ -244,6 +257,7 @@ button::after{
         object-fit: cover;
         object-position: 0 100%;
         height: 100%;
+        border-radius: 15px 0 0 15px;
     }
 
     /* Text */
@@ -258,5 +272,79 @@ button::after{
         width: 15%;
         border-radius: 2000px;
     }
+    
+    /* Active state */
+    
+    .active {
+        position: relative;
+        background: white;
+        color: var(--grayish-blue);
+        margin-bottom: -1rem;
+        padding-bottom: 1rem;
+        border-radius: 0 0 15px;
+    }
 
+    .active .photo-and-infos {
+        height: 100%;
+        width: 100%;
+        overflow: visible;
+        display: flex;
+    }
+
+    .active .photo-and-infos img{
+        width: 10%;
+    }
+
+    .active p,
+    .active .links {
+        width: auto;
+        height: 100%;
+        overflow: visible;
+        display: block;
+    }
+
+    .active p {
+        font-size: 1.2em;
+    }
+
+    .active .links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .active a img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .active strong{
+        color: var(--very-dark-grayis-blue);
+    }
+
+
+    .active .share-div {
+        position: absolute;
+        z-index: 10000;
+        right: -4.3rem;
+        overflow: visible;
+        top: -4rem;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        background-color: var(--very-dark-grayis-blue);
+        flex: 0;
+        gap: 1rem;
+        box-shadow: 0 10px 15px rgba(47, 50, 94, 0.384);
+    }
+
+    .active .share-div::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--very-dark-grayis-blue);
+        left: 45%;
+        bottom: -0.8rem;
+    }
 }
